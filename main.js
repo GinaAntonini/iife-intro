@@ -12,32 +12,13 @@
 // 	return oldSomething;
 
 // })(Something || {});
-
-var SolarSystem = (function(oldSolarSystem){
-	const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
-		const spacecraft = ["orion", "lynx", "dragon", "dreamchaser"];
-
-	oldSolarSystem.getPlanets = function(){
-		// console.log("planets", planets);
-		return planets;
-	}
-
-	oldSolarSystem.setPlanet = function(newPlanet){
-		planets.push(newPlanet);
-	}
-
-	oldSolarSystem.getSpacecraft = function(){
-		// console.log("spacecraft", spacecraft);
-		return spacecraft;
-	}
-
-	oldSolarSystem.setSpacecraft = function(newSpacecraft){
-		spacecraft.push(newSpacecraft);
-	}
-
-	return oldSolarSystem;
-})(SolarSystem || {});
+SolarSystem.setPlanet("Planet X");
 
 let myPlanets = SolarSystem.getPlanets();
 console.log("myPlanets", myPlanets);
 
+let mySpacecraft = SolarSystem.getSpacecraft();
+console.log("mySpacecraft", mySpacecraft);
+
+let myStars = SolarSystem.getStars();
+console.log("myStars", myStars);
